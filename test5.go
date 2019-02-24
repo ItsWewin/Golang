@@ -5,6 +5,14 @@ import (
 	"strings"
 )
 
+func IntForBool(b bool) int {
+	if b {
+		return 1
+	}
+
+	return 0
+}
+
 func main() {
 	name1 := "we"
 	name2 := "win"
@@ -23,4 +31,11 @@ func main() {
 	firstWord := line[0:]
 	fmt.Printf("first word: %s\n", firstWord)
 	fmt.Printf("first blank index: %d\n", i)
+
+	// test %t
+	fmt.Printf("%t %t\n", true, false)
+	fmt.Printf("%d %d\n", IntForBool(true), IntForBool(false))
+
+	// test print
+	fmt.Printf("|%b|%9b|%-9b|%09b|% 9b\n", 37, 37, 37, 37, 37)
 }
