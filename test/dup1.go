@@ -14,7 +14,12 @@ func main() {
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "fetch: %v\n", err)
 		}
-		io.Copy(os.Stdout, resp.Body)
-		resp.Body.close()
+		b, err := ioutil.ReadAll(resp.Body)
+		resp.Body.Close()
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "fetch: %v", err)
+			os.Exit(1)
+		}
+		fmt.Printf("%s", b)
 	}
 }
