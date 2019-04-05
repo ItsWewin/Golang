@@ -1,3 +1,7 @@
-ch2/ftoc
-ch2/ech4
-ch2/cf
+ch2/:
+gobook/:
+test/:
+testBook2/:
+cf
+!*.go
+!*.md
