@@ -2,6 +2,8 @@ ch2/:
 gobook/:
 test/:
 testBook2/:
+ch3/*
+!ch3/*.go
 cf
 !*.go
 !*.md
