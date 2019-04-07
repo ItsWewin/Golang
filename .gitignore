@@ -4,6 +4,10 @@ test/:
 testBook2/:
 ch3/*
 !ch3/*.go
+ch4/*
+!ch4/*.go
+test/*
+!test/*.go
 cf
 !*.go
 !*.md
