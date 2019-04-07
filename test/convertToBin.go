@@ -32,6 +32,10 @@ func printFile(fileName string) {
 	}
 }
 
+func swap(a, b *int) {
+	*a, *b = *b, *a
+}
+
 func main() {
 	fmt.Println(
 		convertToBin(5),
@@ -41,4 +45,8 @@ func main() {
 	)
 
 	printFile("test.txt")
+
+	a, b := 3, 4
+	swap(&a, &b)
+	fmt.Println(a, b)
 }
