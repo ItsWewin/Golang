@@ -11,3 +11,4 @@ test/*
 cf
 !*.go
 !*.md
+blog
