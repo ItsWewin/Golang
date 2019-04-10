@@ -5,7 +5,7 @@ func (node Node) TraversebyValue() {
 		node.Left.TraversebyValue()
 	}
 
-	node.print()
+	node.Print()
 
 	if node.Right != nil {
 		node.Right.TraversebyValue()
@@ -17,6 +17,6 @@ func (node *Node) TraversebyPtr() {
 		return
 	}
 	node.Left.TraversebyPtr()
-	node.print()
+	node.Print()
 	node.Right.TraversebyPtr()
 }

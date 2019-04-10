@@ -12,7 +12,7 @@ func CreateNode(Value int) *Node {
 }
 
 // 拷贝一个 Node 的副本
-func (node Node) print() {
+func (node Node) Print() {
 	fmt.Println(node.Value)
 }
 
