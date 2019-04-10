@@ -34,4 +34,7 @@ func main() {
 	root.TraversebyValue()
 	root.TraversebyPtr()
 	root.SetValue(10)
+
+	myRoot := myTreeNode{&root}
+	myRoot.postOrderTraversal()
 }
