@@ -1,4 +1,4 @@
-package gotest2
+package gotest
 
 import (
 	"fmt"

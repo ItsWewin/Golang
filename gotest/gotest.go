@@ -1,4 +1,4 @@
-package gotest2
+package gotest
 
 func add(a, b int) int {
 	return a + b
