@@ -6,6 +6,7 @@ import (
 	"io"
 	"io/ioutil"
 	"net/http"
+	"os"
 
 	"golang.org/x/net/html/charset"
 	"golang.org/x/text/encoding"
@@ -38,7 +39,18 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Printf("%s\n", all)
+	// fmt.Printf("%s\n", all)
+	fout, err := os.Create("result.html")
+	defer fout.Close()
+
+	if err != nil {
+		panic(err)
+		return
+	}
+
+	for i := 0; i < 10; i++ {
+		fout.Write(all)
+	}
 }
 
 func determineEncoding(r io.Reader) encoding.Encoding {
