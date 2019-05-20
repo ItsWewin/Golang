@@ -33,10 +33,14 @@ func (c Computer) useUsb(device usb) {
 }
 
 func main() {
+
 	computer := Computer{}
 	phone := Phone{}
 	camera := Camera{}
+	camera2 := Camera{}
+	devices := [3]usb{camera, phone, camera2}
 
-	computer.useUsb(phone)
-	computer.useUsb(camera)
+	for _, device := range devices {
+		computer.useUsb(device)
+	}
 }
